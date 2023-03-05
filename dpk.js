@@ -16,7 +16,7 @@ exports.deterministicPartitionKey = (event) => {
   let candidate;
   if (event && event.partitionKey) {
     candidate = event.partitionKey;
-  } else if (event && !event.data.partitionKey) {
+  } else if (event && !event.partitionKey) {
     const data = JSON.stringify(event);
     candidate = createHash(data);
   }
