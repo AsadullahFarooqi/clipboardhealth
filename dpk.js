@@ -11,7 +11,7 @@ function createHash(event) {
   return res;
 }
 
-
+// add deterministicPartitionKey function to exports
 exports.deterministicPartitionKey = (event) => {
   let candidate;
   if (event && event.partitionKey) {
